@@ -2,6 +2,17 @@
 
 This repo is a simple example on how to deploy a Kubernetes Pod which acts as the private-location worker used for [Synthetics Private Locations](https://docs.datadoghq.com/synthetics/private_locations/#overview)
 
+## Requirements
+
+Having access to a Kubernetes Cluster to deploy the `private-worker-pod`.
+If you don't you can simply spin up a one node VM with minikube by executing the following :
+
+```
+minikube start -p private_locations
+```
+
+If you do not have minikube installed yet, please refer to [this doc](https://kubernetes.io/docs/setup/learning-environment/minikube/)
+
 ## Setup
 
 1. Run git clone and cd into the working directory
