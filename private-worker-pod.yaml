@@ -8,11 +8,11 @@ spec:
   containers:
   - name: datadog-private-location-worker
     image: datadog/synthetics-private-location-worker
-    args: ["-f=json", "-vv"]
+    args: ["-f=json"]
     volumeMounts:
     - mountPath: /etc/datadog/synthetics-check-runner.json
       name: worker-config
-      subPath: worker-config-kubernetes-private-location-337f2dec8779edb4038c22ee66267aa5.json
+      subPath: <MY_WORKER_CONFIG_FILE_NAME>.json
   volumes:
   - name: worker-config
     configMap:
