@@ -11,7 +11,7 @@ If you don't you can simply spin up a one-node cluster with minikube by executin
 minikube start -p private_locations
 ```
 
-If you do not have minikube installed yet, please refer to [this doc](https://kubernetes.io/docs/setup/learning-environment/minikube/)
+If you do not have minikube installed yet, please refer to [this doc](https://kubernetes.io/docs/setup/learning-environment/minikube/).
 
 ## Setup
 
