@@ -47,7 +47,7 @@ kubectl create -f "https://raw.githubusercontent.com/DataDog/datadog-agent/maste
 
 kubectl create -f "https://raw.githubusercontent.com/DataDog/datadog-agent/master/Dockerfiles/manifests/rbac/clusterrolebinding.yaml"
 
-kubectl apply -f datadog/
+kubectl apply -f datadog.yaml
 ```
 
 
