@@ -5,7 +5,7 @@ This repo is a simple example on how to deploy a Kubernetes Pod which acts as th
 ## Requirements
 
 Having access to a Kubernetes Cluster to deploy the `private-worker-pod`.
-If you don't you can simply spin up a one node VM with minikube by executing the following :
+If you don't you can simply spin up a one-node cluster with minikube by executing the following :
 
 ```
 minikube start -p private_locations
