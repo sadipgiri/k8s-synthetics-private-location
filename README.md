@@ -46,7 +46,7 @@ kubectl apply -f datadog/
 5. Create a Kubernetes ConfigMap with the previously created json file by executing the following :
 
 ```
-kubectl create configmap private-worker-confid --from-file=<worker-config-file>.json
+kubectl create configmap private-worker-config --from-file=<worker-config-file>.json
 ```
 
 6. Edit the `private-worker-pod.yaml` and modify <worker-config-file>.json with the name of your Private Location JSON config file in the `
