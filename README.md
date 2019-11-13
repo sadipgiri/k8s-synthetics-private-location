@@ -13,7 +13,21 @@ cd ./k8s-synthetics-private-location
 
 2. Deploy the Datadog agent :
 
-First Copy paste the output of running `echo -n <YOUR_DATADOG_API_KEY> | base64` under the 
+Start by copy pasting the output of running `echo -n <YOUR_DATADOG_API_KEY> | base64` under the `api-key` key in the `datadog/datadog.yaml` file :
+
+```
+apiVersion: v1
+kind: Secret
+metadata:
+  name: datadog-secret
+  labels:
+    app: "datadog"
+type: Opaque
+data:
+  api-key: "<YOUR_ENCODED_KEY_HERE>"
+```
+
+Then apply the following manifests:
 
 ```
 kubectl create -f "https://raw.githubusercontent.com/DataDog/datadog-agent/master/Dockerfiles/manifests/rbac/clusterrole.yaml"
@@ -24,7 +38,6 @@ kubectl create -f "https://raw.githubusercontent.com/DataDog/datadog-agent/maste
 
 kubectl apply -f datadog/
 ```
-
 
 
 
@@ -42,7 +55,7 @@ kubectl create configmap private-worker-confid --from-file=<worker-config-file>.
 
 
 
-Trying the steps above should setup a a private location worker pod reporting logs to your Datadog account!
+The steps above will setup a private location worker pod reporting logs to your Datadog account!
 
 ## Adding additional arguments
 
