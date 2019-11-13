@@ -41,7 +41,7 @@ kubectl apply -f datadog/
 
 
 
-3. Create a new Private Location by clicking on 'Add private location" at [app.datadoghq.com/synthetics/settings](app.datadoghq.com/synthetics/settings). Input Name, Description and Tags and click on "Save & Generate"
+3. Create a new Private Location by clicking on "Add private location" at [app.datadoghq.com/synthetics/settings](app.datadoghq.com/synthetics/settings). Input Name, Description and Tags and click on "Save & Generate"
 4. Create your Private Location JSON config file in your working directory by copy pasting the command displayed in the UI.
 5. Create a Kubernetes ConfigMap with the previously created json file by executing the following :
 
