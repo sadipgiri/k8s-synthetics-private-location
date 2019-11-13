@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: private-location-worker
+  annotations:
+    ad.datadoghq.com/datadog-private-location-worker.logs: '[{"source":"private-location-worker","service":"synthetics"}]'
+spec:
+  containers:
+  - name: datadog-private-location-worker
+    image: datadog/synthetics-private-location-worker
+    args: ["-f=json", "-vv"]
+    volumeMounts:
+    - mountPath: /etc/datadog/synthetics-check-runner.json
+      name: worker-config
+      subPath: worker-config-kubernetes-private-location-337f2dec8779edb4038c22ee66267aa5.json
+  volumes:
+  - name: worker-config
+    configMap:
+      name: private-worker-config
