@@ -49,7 +49,7 @@ kubectl apply -f datadog/
 kubectl create configmap private-worker-config --from-file=<worker-config-file>.json
 ```
 
-6. Edit the `private-worker-pod.yaml` and modify `<MY_WORKER_CONFIG_FILE_NAME>.json` with the name of your Private Location JSON config file in the `SetupsubPath`section.
+6. Edit the `private-worker-pod.yaml` and modify `<MY_WORKER_CONFIG_FILE_NAME>.json` with the name of your Private Location JSON config file in the `subPath`section.
 7. Run `kubectl apply -f private-worker-pod.yaml`
 
 
